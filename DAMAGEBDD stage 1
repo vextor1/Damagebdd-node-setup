@@ -18,3 +18,30 @@ OS: Ubuntu Server 24.04 LTS / linux server
 Bandwidth: MINIMUM 1 Gbps
 Backups: Daily snapshots
 Alerts: Telegram, Discord or Linkedin
+
+Expected Node Setup
+
+Damage Node Setup – Bitcoin Node Setup
+Public Build Log
+I will maintain a public build log documenting every step of the deployment process, including:
+• Server provisioning
+• Operating system installation
+• Package installation
+• Node installation
+• Configuration changes
+• Synchronization progress
+• Monitoring setup
+• Troubleshooting
+• Performance improvements
+• Maintenance updates
+The build log will be updated regularly throughout the program.
+Repository:
+I will publish every step publicly in my github repo - https://github.com/vextor1/Damagebdd-node-setup
+
+Commitment to report progress
+
+I will publish progress updates at least twice per week. Any issues encountered and their resolutions will
+be documented publicly. Configuration changes and performance metrics will also be shared throughout
+the deployment.
+
+SEND REWARD TO: imohinangha@rizful.com
