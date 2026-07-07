@@ -596,6 +596,7 @@ sudo lsof -i :4888
 16. Finding the node/account address
 
 Once the stack has started and the node has initialized, locate the generated account or node address from the logs.
+or top right corner of your node dashboard (WALLET)
 
 View live logs:
 
@@ -604,12 +605,12 @@ docker compose logs -f
 Look for output similar to:
 
 Account Address:
-0x1234567890abcdef...
+ak_2be8qTvAR7K8M13MU8REw...
 
 or
 
 Node Address:
-0x1234567890abcdef...
+ak_2be8qTvAR7K8M13MU8REw...
 
 Copy this address, as it is typically required for:
 
