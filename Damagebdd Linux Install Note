@@ -270,7 +270,7 @@ Note: Replace `damagebdd` below with the actual project directory if it has a di
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/DamageBDD/DamageBDD.git
 ```
 
 Enter the project:
@@ -290,7 +290,7 @@ README.md
 Build the stack
 
 ```bash
-docker compose build
+docker compose up --build -d
 ```
 
 Start the stack
@@ -428,6 +428,25 @@ Remove Container
 docker rm <container-name>
 ```
 
+First health check
+
+Immediately after the containers start, verify that the web service is responding.
+
+Open:
+
+http://localhost:4888/version/
+
+A successful response confirms that:
+
+Docker containers are running
+DamageBDD Web API is available
+Port 4888 is correctly exposed
+
+If this endpoint does not respond, check:
+
+docker compose ps
+docker compose logs -f
+
 12. Tor Onion Setup Notes
 
 Install Tor
@@ -465,15 +484,15 @@ sudo nano /etc/tor/torrc
 Add:
 
 ```text
-HiddenServiceDir /var/lib/tor/my_hidden_service/
+HiddenServiceDir /var/lib/tor/damagebdd/
 
-HiddenServicePort 80 127.0.0.1:8080
+HiddenServicePort 80 127.0.0.1:4888
 ```
 
 Meaning:
 
-* Onion Service listens on port 80.
-* Traffic forwards to localhost port 8080.
+* Onion Service listens on port 88.
+* Traffic forwards to localhost port 4888.
 
 Restart Tor:
 
@@ -486,7 +505,7 @@ sudo systemctl restart tor
 View:
 
 ```bash
-sudo cat /var/lib/tor/my_hidden_service/hostname
+sudo cat /var/lib/tor/damagebdd/hostname
 ```
 
 Example:
@@ -514,7 +533,7 @@ docker ps
 Ensure the application listens on:
 
 ```
-127.0.0.1:8080
+127.0.0.1:4888
 ```
 
 Open the `.onion` address using the Tor Browser.
@@ -572,12 +591,100 @@ Port Already in Use
 Find the process:
 
 ```bash
-sudo lsof -i :8080
+sudo lsof -i :4888
 ```
+16. Finding the node/account address
+
+Once the stack has started and the node has initialized, locate the generated account or node address from the logs.
+
+View live logs:
+
+docker compose logs -f
+
+Look for output similar to:
+
+Account Address:
+0x1234567890abcdef...
+
+or
+
+Node Address:
+0x1234567890abcdef...
+
+Copy this address, as it is typically required for:
+
+node registration
+peer identification
+network participation
+configuration of other nodes
+
+If the logs are extensive, search for the keywords:
+
+address
+Account
+Node
+wallet
+
+17. First synchronization proof
+
+After startup, confirm that synchronization has begun.
+
+Run:
+
+docker compose logs -f
+
+Evidence of a successful first sync generally includes messages indicating that the node is:
+
+connecting to peers
+downloading blockchain data
+processing blocks
+increasing synchronization height
+
+For example:
+
+Connected to peer ...
+Synchronizing...
+Imported block ...
+
+or
+
+Current block height:
+
+Seeing these messages confirms that the node is actively joining the network.
+
+18. Add a clear data safety warning
+
+Include a highlighted warning near the Docker commands section.
+
+⚠️ Important: Do Not Delete Docker Volumes or Secrets
+
+DamageBDD stores persistent data such as blockchain state, databases, cryptographic keys, and other application data in Docker volumes and managed secrets.
+
+Avoid running commands that remove persistent storage unless you intentionally want to reset the node.
+
+In particular, use caution with:
+
+docker compose down -v
+docker volume rm ...
+docker system prune --volumes
+
+Deleting volumes or secrets may permanently remove:
+
+blockchain synchronization data
+node identity
+account or wallet information
+configuration secrets
+application databases
+
+If you need to clean up Docker resources, prefer:
+
+docker compose down
+
+which stops and removes containers without deleting persistent data.
 
 Stop the conflicting process or change the application's listening port.
 
-16. Best Practices
+19. Best Practices
 
 * Keep Ubuntu updated regularly.
 * Use Docker Compose to manage multi-container applications.
@@ -587,7 +694,7 @@ Stop the conflicting process or change the application's listening port.
 * Keep Tor, Docker, and the operating system updated with security patches.
 * Use version control (such as Git) for project configuration files.
 
-# 17. Useful Commands
+20. Useful Commands
 
 | Task                    | Command                                            |
 | ----------------------- | -------------------------------------------------- |
