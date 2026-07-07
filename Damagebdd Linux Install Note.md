@@ -621,7 +621,9 @@ or top right corner of your node dashboard (WALLET)
 
 View live logs:
 
-```docker compose logs -f```
+```bash
+docker compose logs -f
+```
 
 Look for output similar to:
 
@@ -653,7 +655,9 @@ After startup, confirm that synchronization has begun.
 
 Run:
 
-```docker compose logs -f```
+```bash
+docker compose logs -f
+```
 
 Evidence of a successful first sync generally includes messages indicating that the node is:
 
