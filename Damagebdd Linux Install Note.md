@@ -398,13 +398,13 @@ docker compose ps
 Execute Shell
 
 ```bash
-docker compose exec backend bash
+docker compose exec <service-name> bash
 ```
 
 Example:
 
 ```bash
-docker compose exec backend bash
+docker compose exec <service-name> bash
 ```
 
 Recreate Containers
@@ -624,7 +624,7 @@ or top right corner of your node dashboard (WALLET)
 
 View live logs:
 
-docker compose logs -f
+```docker compose logs -f```
 
 Look for output similar to:
 
