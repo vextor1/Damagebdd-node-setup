@@ -621,7 +621,7 @@ or top right corner of your node dashboard (WALLET)
 
 View live logs:
 
-```
+```bash
 docker compose logs -f
 ```
 
