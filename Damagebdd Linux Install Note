@@ -14,11 +14,13 @@ Table of Contents
 10. Common Docker Commands
 11. Managing the DamageBDD Stack
 12. Tor Installation
-13. Creating an Onion Service
-14. Verifying the Onion Service
+13. Get the Onion Address
+14. Verify the Onion Service
 15. Troubleshooting
-16. Best Practices
-17. Useful Commands Cheat Sheet
+16. Finding the node/account address
+17. First synchronization proof
+18. Best Practices
+19. Useful Commands
 
 1. Introduction
 
@@ -108,7 +110,7 @@ Remove the USB drive.
 Always update the system before installing software.
 
 ```
-bash
+</> bash
 sudo apt update
 sudo apt upgrade -y
 ```
@@ -118,8 +120,6 @@ sudo apt upgrade -y
 ```bash
 
 ```sudo apt autoremove -y```
-
----
 
 5. Docker Installation
 
@@ -623,6 +623,7 @@ Find the process:
 ```bash
 sudo lsof -i :4888
 ```
+
 16. Finding the node/account address
 
 Once the stack has started and the node has initialized, locate the generated account or node address from the logs.
@@ -683,7 +684,7 @@ Current block height:
 
 Seeing these messages confirms that the node is actively joining the network.
 
-19. Best Practices
+18. Best Practices
 
 * Keep Ubuntu updated regularly.
 * Use Docker Compose to manage multi-container applications.
@@ -693,7 +694,7 @@ Seeing these messages confirms that the node is actively joining the network.
 * Keep Tor, Docker, and the operating system updated with security patches.
 * Use version control (such as Git) for project configuration files.
 
-20. Useful Commands
+19. Useful Commands
 
 | Task                    | Command                                            |
 | ----------------------- | -------------------------------------------------- |
