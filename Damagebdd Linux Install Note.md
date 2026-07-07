@@ -398,7 +398,7 @@ docker compose ps
 Execute Shell
 
 ```bash
-docker compose exec <service-name> bash
+docker compose exec backend bash
 ```
 
 Example:
@@ -417,12 +417,6 @@ Remove Unused Resources
 
 ```bash
 docker system prune
-```
-
-Remove everything unused:
-
-```bash
-docker system prune -a
 ```
 
 11. Managing the Stack
