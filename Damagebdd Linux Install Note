@@ -107,7 +107,8 @@ Remove the USB drive.
 
 Always update the system before installing software.
 
-```bash
+```
+bash
 sudo apt update
 sudo apt upgrade -y
 ```
