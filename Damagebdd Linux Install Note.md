@@ -148,9 +148,6 @@ docker compose down
 
 which stops and removes containers without deleting persistent data.
 
-Stop the conflicting process or change the application's listening port.
-
-
 Remove old Docker versions
 
 ```bash
