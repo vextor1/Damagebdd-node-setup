@@ -491,8 +491,8 @@ HiddenServicePort 80 127.0.0.1:4888
 
 Meaning:
 
-* Onion Service listens on port 88.
-* Traffic forwards to localhost port 4888.
+* Onion Service listens on port 80.
+* Traffic forwards to localhost port 8080.
 
 Restart Tor:
 
