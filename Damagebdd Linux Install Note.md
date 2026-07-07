@@ -656,7 +656,7 @@ After startup, confirm that synchronization has begun.
 
 Run:
 
-docker compose logs -f
+```docker compose logs -f```
 
 Evidence of a successful first sync generally includes messages indicating that the node is:
 
