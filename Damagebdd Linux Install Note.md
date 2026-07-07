@@ -570,8 +570,6 @@ sudo usermod -aG docker $USER
 
 Log out and back in.
 
----
-
 Docker Service Not Running
 
 ```bash
