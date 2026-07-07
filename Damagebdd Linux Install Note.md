@@ -707,4 +707,4 @@ Seeing these messages confirms that the node is actively joining the network.
 | Install Tor             | `sudo apt install tor -y`                          |
 | Restart Tor             | `sudo systemctl restart tor`                       |
 | Tor status              | `sudo systemctl status tor`                        |
-| View Onion hostname     | `sudo cat /var/lib/tor/my_hidden_service/hostname` |
+| View Onion hostname     | `sudo cat /var/lib/tor/damagebdd/hostname` |
