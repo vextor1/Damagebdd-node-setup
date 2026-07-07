@@ -117,7 +117,8 @@ sudo apt upgrade -y
 (Optional)
 
 ```bash
-sudo apt autoremove -y```
+sudo apt autoremove -y
+```
 
 5. Docker Installation
 
