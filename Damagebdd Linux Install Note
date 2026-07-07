@@ -122,6 +122,35 @@ sudo apt autoremove -y
 
 5. Docker Installation
 
+⚠️ Important: Do Not Delete Docker Volumes or Secrets
+
+DamageBDD stores persistent data such as blockchain state, databases, cryptographic keys, and other application data in Docker volumes and managed secrets.
+
+Avoid running commands that remove persistent storage unless you intentionally want to reset the node.
+
+In particular, use caution with:
+
+docker compose down -v
+docker volume rm ...
+docker system prune --volumes
+
+Deleting volumes or secrets may permanently remove:
+
+blockchain synchronization data
+node identity
+account or wallet information
+configuration secrets
+application databases
+
+If you need to clean up Docker resources, prefer:
+
+docker compose down
+
+which stops and removes containers without deleting persistent data.
+
+Stop the conflicting process or change the application's listening port.
+
+
 Remove old Docker versions
 
 ```bash
@@ -276,7 +305,7 @@ git clone https://github.com/DamageBDD/DamageBDD.git
 Enter the project:
 
 ```bash
-cd damagebdd
+cd DamageBDD
 ```
 
 Verify files:
@@ -492,7 +521,7 @@ HiddenServicePort 80 127.0.0.1:4888
 Meaning:
 
 * Onion Service listens on port 80.
-* Traffic forwards to localhost port 8080.
+* Traffic forwards to localhost port 4888.
 
 Restart Tor:
 
@@ -652,38 +681,6 @@ or
 Current block height:
 
 Seeing these messages confirms that the node is actively joining the network.
-
-18. Add a clear data safety warning
-
-Include a highlighted warning near the Docker commands section.
-
-⚠️ Important: Do Not Delete Docker Volumes or Secrets
-
-DamageBDD stores persistent data such as blockchain state, databases, cryptographic keys, and other application data in Docker volumes and managed secrets.
-
-Avoid running commands that remove persistent storage unless you intentionally want to reset the node.
-
-In particular, use caution with:
-
-docker compose down -v
-docker volume rm ...
-docker system prune --volumes
-
-Deleting volumes or secrets may permanently remove:
-
-blockchain synchronization data
-node identity
-account or wallet information
-configuration secrets
-application databases
-
-If you need to clean up Docker resources, prefer:
-
-docker compose down
-
-which stops and removes containers without deleting persistent data.
-
-Stop the conflicting process or change the application's listening port.
 
 19. Best Practices
 
