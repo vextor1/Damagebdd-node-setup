@@ -99,3 +99,10 @@ Goal: First successful node connection.
 WHAT I CAN START WITH NOW ---------------
 
 installment on system purchase
+
+SCENARIO TO EXECUTE -----------------------------------------------------------
+Feature: DamageBDD Node API Verification
+  Scenario: DamageBDD node version endpoint is reachable
+    Given I am using server "http://127.0.0.1:4888"
+    When I make a GET request to "/version/"
+    Then the response status must be "200"
