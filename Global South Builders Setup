@@ -14,16 +14,13 @@ All processors are 11th Generation Intel Tiger Lake CPUs.
 Graphics
 Integrated graphics only: Intel Iris Xe Graphics (Core i7)
 
-Memory (RAM): 8 GB - can upgradeble to 16 GB 
+Memory (RAM): 8 GB
 
-Storage: 512 GB SSD - can be upgradeble to 2 TB
-
-2 TB (depending on configuration)
-Storage is upgradeable via the M.2 slot
+Storage: 512 GB SSD
 
 Display Options: 13.3-inch Full HD (1920 × 1080), 60 Hz.
 
-Battery: Approximately 8–12 hours depending on configuration and usage.
+Battery: Approximately 5 hours depending on configuration and usage.
 
 Operating System: Windows 11 Pro (To be Upgraded to LINUX
 
@@ -76,6 +73,26 @@ Connect to network
 Synchronize
 Verify logs
 Verify node operation
+
+Milestone 4 — Successful DamageBDD Verification Run
+
+This should be a mandatory milestone, not just an installation step.
+
+Verification test
+
+Run the node continuously for 72 hours.
+
+During the test:
+
+Node remains connected
+Node successfully synchronizes
+Required network communications work
+No unexplained node crashes
+No data corruption
+CPU/RAM remain within acceptable limits
+Storage remains healthy
+Internet remains available
+Power system remains operational
 
 Goal: First successful node connection.
 
