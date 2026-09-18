@@ -1,3 +1,5 @@
+SET UP PLAN ----------------------------
+
 Model: Dell Latitude 5320 2-in-1
 Release Year: 2021
 
@@ -21,21 +23,6 @@ Storage is upgradeable via the M.2 slot
 
 Display Options: 13.3-inch Full HD (1920 × 1080), 60 Hz.
 
-
-Ports
-2 × Thunderbolt 4 (USB-C)
-1 × USB 3.2 Gen 1 Type-A
-HDMI 2.0
-microSD card reader
-3.5 mm headphone/microphone jack
-Optional Smart Card reader
-Optional Nano-SIM slot (LTE models)
-
-Wireless
-Intel Wi-Fi 6 (802.11ax)
-Bluetooth 5.1
-Optional 4G LTE WWAN
-
 Battery: Approximately 8–12 hours depending on configuration and usage.
 
 Operating System: Windows 11 Pro (To be Upgraded to LINUX
@@ -51,13 +38,9 @@ Light Availability - 5 hours - can be upgraded with solar setup to 24 hours - $7
 
 Delivery: 1 hours after payment installments
 
-Power Arrangement
+POWER ARRANGEMENT ----------------------------------------------------
 
 I would structure the power system as:
-
-Grid → UPS/DC backup → Laptop
-
-and eventually:
 
 Solar panels → Charge controller → Battery → Inverter/DC output → Laptop
 
@@ -71,35 +54,19 @@ Phase 2 — Solar deployment
 
 For the $700 solar upgrade
 
-Proposed Milestones
+PROPOSED MILESTONE -------------------------------
 Milestone 1 — Procurement
 
 Timeline: Day 0
 
-Purchase:
-
-Dell Latitude 5320 — $543
-2 TB SSD — $230
-Data — $100
-
-Budget: $873
-
-Goal: Have all core equipment and connectivity ready.
-
-Milestone 2 — Hardware Upgrade --------------------------------------------
-
-Timeline: Day 1
-
-Milestone 1 — Linux Configuration
-
-Timeline: Day 1–2
+Milestone 2 — Linux Configuratione
 
 Linux installation
 System updates
 
 Goal: Stable Linux server environment.
 
-Milestone 2 — DamageBDD Node Deployment
+Milestone 3 — DamageBDD Node Deployment
 
 Timeline: Day 2
 
@@ -111,3 +78,7 @@ Verify logs
 Verify node operation
 
 Goal: First successful node connection.
+
+WHAT I CAN START WITH NOW ---------------
+
+installment on system purchase
