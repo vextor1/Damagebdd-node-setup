@@ -6,12 +6,22 @@ $700 provisional solar allocation
 
 Install:
 
-Solar panels
-Battery
+Power
+
+600 W solar PV
+24 V 100 Ah LiFePO₄ battery
+2.4 kWh nominal battery
 MPPT controller
-DC/inverter system
-Protection
-Monitoring
+DC-DC/USB-C PD for laptop where compatible
+
+Expected combined load
+
+Approximately 45 W planning load
+Approximately 1.08 kWh/day
+
+Expected battery-only autonomy
+
+Approximately 35–40 hours practical
 
 Then test the node through overnight/no-grid periods.
 
