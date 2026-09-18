@@ -49,4 +49,65 @@ Total: $873
 
 Light Availability - 5 hours - can be upgraded with solar setup to 24 hours - $700
 
-Delivery: 1 hours after payment installments 
+Delivery: 1 hours after payment installments
+
+Power Arrangement
+
+I would structure the power system as:
+
+Grid → UPS/DC backup → Laptop
+
+and eventually:
+
+Solar panels → Charge controller → Battery → Inverter/DC output → Laptop
+
+Phase 1 — Basic power
+
+For the initial deployment:
+
+The laptop's internal battery should be treated as a backup buffer, not as the primary 24-hour power source.
+
+Phase 2 — Solar deployment
+
+For the $700 solar upgrade
+
+Proposed Milestones
+Milestone 1 — Procurement
+
+Timeline: Day 0
+
+Purchase:
+
+Dell Latitude 5320 — $543
+2 TB SSD — $230
+Data — $100
+
+Budget: $873
+
+Goal: Have all core equipment and connectivity ready.
+
+Milestone 2 — Hardware Upgrade --------------------------------------------
+
+Timeline: Day 1
+
+Milestone 1 — Linux Configuration
+
+Timeline: Day 1–2
+
+Linux installation
+System updates
+
+Goal: Stable Linux server environment.
+
+Milestone 2 — DamageBDD Node Deployment
+
+Timeline: Day 2
+
+Install DamageBDD node
+Configure node
+Connect to network
+Synchronize
+Verify logs
+Verify node operation
+
+Goal: First successful node connection.
